@@ -1,0 +1,22 @@
+# Development: build the image locally and run with hot-reload.
+# Usage: docker compose up --build
+services:
+  api:
+    build: .
+    image: fahad1000mir/ai-marketing-automation:dev
+    container_name: ai-marketing-api-dev
+    env_file: .env
+    environment:
+      # Infra paths — point the DB and image storage at the mounted data volume.
+      DATABASE_URL: sqlite:////app/data/marketing.db
+      IMAGE_STORAGE_DIR: /app/data/generated_images
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app # live source for hot-reload
+      - app_data:/app/data # persistent DB + generated images
+    # Override the production CMD with a single reloading Uvicorn process.
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  app_data:

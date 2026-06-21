@@ -8,3 +8,12 @@ wheels/
 
 # Virtual environments
 .venv
+
+# SQLite database
+*.db
+
+# Environment / secrets
+.env
+
+# Locally generated marketing images
+generated_images/
