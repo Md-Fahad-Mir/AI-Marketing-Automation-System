@@ -10,7 +10,6 @@
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![Pydantic](https://img.shields.io/badge/Pydantic-2-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
 [![uv](https://img.shields.io/badge/uv-managed-DE5FE9?logo=uv&logoColor=white)](https://github.com/astral-sh/uv)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#-license)
 
 </div>
 
@@ -105,6 +104,7 @@ It ships with a **pluggable AI-provider layer** (OpenAI, Google Gemini, Anthropi
 
 ```bash
 uv sync
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
 ```
 
 ### Option 2 — using `pip`
@@ -314,9 +314,9 @@ externally. To ship a new version: rebuild → push → `pull` → `up -d` on EC
 ## 🖼️ Screenshots
 
 
-| Swagger UI (`/docs`) 
-| 
-| ![Swagger UI](Screenshots/image.png) 
+| Swagger UI (`/docs`) |
+ 
+| ![Swagger UI](Screenshots/image.png) |
 ---
 
 ## 🗺️ Future Improvements
