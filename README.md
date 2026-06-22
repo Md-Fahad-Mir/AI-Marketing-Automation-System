@@ -316,7 +316,7 @@ externally. To ship a new version: rebuild → push → `pull` → `up -d` on EC
 
 | Swagger UI (`/docs`) |
  
-| ![Swagger UI](Screenshots/image.png) |
+ ![Swagger UI](Screenshots/image.png) 
 ---
 
 ## 🗺️ Future Improvements
